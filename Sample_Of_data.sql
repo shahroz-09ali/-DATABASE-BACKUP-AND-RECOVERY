@@ -10,3 +10,18 @@ insert into students values( 5 ,"lovecesh", "lovekesh09@gmail.com");
 insert into students values( 6 ,"aman", "amanrathore98@gmail.com");
 select *from students;
 
+-- backup commands (commmand prompt);
+----> mysqldump -u root -p sample > sample_backup.sql
+-- now you can drop the sample database 
+Drop database sample;
+
+---- now recovery process -----
+create database sample;
+-----> mysql -u root -p sample < sample_backup.sql
+check to verify
+USE sample;
+
+SELECT * FROM students;
+
+
+
